@@ -1,5 +1,8 @@
 //--------------------------------------------------
-// media queries
+// media queries 
+//--------------------------------------------------
+//--------------------------------------------------
+// mixins
 //--------------------------------------------------
 @mixin breakpoint($breakpoint) {
   @media screen and (min-width: $breakpoint + 1) {
@@ -11,4 +14,27 @@
   @media screen and (max-width: $breakpoint) {
     @content;
   } 
+}
+
+//--------------------------------------------------
+// helper classes
+//--------------------------------------------------
+.breakpoint-small-up {
+  display: none;
+  @include breakpoint($small) { display: block; }
+}
+
+.breakpoint-medium-up {
+  display: none;
+  @include breakpoint($medium) { display: block; }
+}
+
+.breakpoint-small-down {
+  display: block;
+  @include breakpoint($small) { display: none; }
+}
+
+.breakpoint-medium-down {
+  display: block;
+  @include breakpoint($medium) { display: none; }
 }

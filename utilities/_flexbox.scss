@@ -25,6 +25,15 @@
 .flex-h-around { justify-content: space-around; }
 
 //--------------------------------------------------
+// horizontal alignment of self
+//--------------------------------------------------
+.flex-hs-start { justify-self: flex-start; }
+.flex-hs-end { justify-self: flex-end; }
+.flex-hs-center { justify-self: center; }
+.flex-hs-between { justify-self: space-between; }
+.flex-hs-around { justify-self: space-around; }
+
+//--------------------------------------------------
 // vertical alignment
 //--------------------------------------------------
 .flex-v-start { align-items: flex-start; }
@@ -67,7 +76,7 @@
 .flex-1-fith { flex: 0 1 20%; }
 .flex-2-fiths { flex: 0 1 40%; }
 .flex-3-fiths { flex: 0 1 60%; }
-.flex-5-fiths { flex: 0 1 80%; }
+.flex-4-fiths { flex: 0 1 80%; }
 
 //--------------------------------------------------
 // helpers

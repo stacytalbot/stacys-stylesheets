@@ -3,6 +3,7 @@
 //--------------------------------------------------
 * { 
   box-sizing: border-box;
+  font-family: $body-font;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -24,10 +25,30 @@ h4 {
 }
 
 p {
+  line-height: $body-line-height;
 }
 
 a {
   &:hover { text-decoration: none; }
+}
+
+//--------------------------------------------------
+// site structure - reusable styles
+//--------------------------------------------------
+%container {
+  margin: 0 auto;
+  padding-right: rem-calc($gutter-small);
+  padding-left: rem-calc($gutter-small);
+
+  @include breakpoint($medium){ 
+    padding-right: rem-calc($gutter-medium);
+    padding-left: rem-calc($gutter-medium);
+  }
+
+  @include breakpoint($large){ 
+    padding-right: rem-calc($gutter-large);
+    padding-left: rem-calc($gutter-large);
+  }
 }
 
 //--------------------------------------------------
@@ -37,10 +58,44 @@ a {
   @include breakpoint($medium){ width: $site-width; }
 }
 
+.gutter--left {
+  padding-left: $gutter-small;
+  @include breakpoint($medium) { padding-left: $gutter-medium; }
+  @include breakpoint($large) { padding-left: $gutter-large; }
+}
+
+.gutter--right {
+  padding-right: $gutter-small;
+  @include breakpoint($medium) { padding-right: $gutter-medium; }
+  @include breakpoint($large) { padding-right: $gutter-large; }
+}
+
+.gutters {
+  @extend .gutter--left;
+  @extend .gutter--right;
+}
+
 .container {
   @extend .site-width;
-  margin: 0 auto;
-  padding: rem-calc(0 $gutter-small);
+  @extend %container;
+}
 
-  @include breakpoint($medium){ padding: rem-calc(0 $gutter-medium); }
+//--------------------------------------------------
+// page padding
+//--------------------------------------------------
+.page-padding--top {
+  padding-top: $page-padding-top-small;
+  @include breakpoint($medium) { padding-top: $page-padding-top-medium; }
+  @include breakpoint($large) { padding-top: $page-padding-top-large; }
+}
+
+.page-padding--bottom {
+  padding-bottom: $page-padding-bottom-small;
+  @include breakpoint($medium) { padding-bottom: $page-padding-bottom-medium; }
+  @include breakpoint($large) { padding-bottom: $page-padding-bottom-large; }
+}
+
+.page-padding {
+  @extend .page-padding--top;
+  @extend .page-padding--bottom;
 }
