@@ -2,14 +2,14 @@
 // buttons
 //--------------------------------------------------
 .button {
-  font-size: $font-size-small;
+  font-size: $button-font-size-small;
   padding: rem-calc(11 24);
   
   @include breakpoint($small) {
-    font-size: $font-size-medium;
+    font-size: $button-font-size-medium;
     padding: rem-calc(14 35);
   }
-
+  
 //--------------------------------------------------
 // styles
 //--------------------------------------------------
