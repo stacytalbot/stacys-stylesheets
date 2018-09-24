@@ -16,22 +16,37 @@
 .flex-1 { flex: 1; } 
 
 //--------------------------------------------------
+// flex size
+//--------------------------------------------------
+.flex-grow { flex-grow: 1; }
+.flex-no-grow { flex-grow: 0; }
+.flex-shrink { flex-shirnk: 1; }
+.flex-no-shrink { flex-shrink: 0; }
+
+//--------------------------------------------------
 // horizontal alignment
 //--------------------------------------------------
 .flex-h-start { justify-content: flex-start; }
-.flex-h-end { justify-content: flex-end; }
 .flex-h-center { justify-content: center; }
 .flex-h-between { justify-content: space-between; }
 .flex-h-around { justify-content: space-around; }
+
+.flex-h-end { 
+  justify-content: flex-end; 
+  margin-left: auto;
+}
 
 //--------------------------------------------------
 // horizontal alignment of self
 //--------------------------------------------------
 .flex-hs-start { justify-self: flex-start; }
-.flex-hs-end { justify-self: flex-end; }
 .flex-hs-center { justify-self: center; }
 .flex-hs-between { justify-self: space-between; }
 .flex-hs-around { justify-self: space-around; }
+.flex-hs-end { 
+  justify-self: flex-end; 
+  margin-left: auto;
+}
 
 //--------------------------------------------------
 // vertical alignment
@@ -46,10 +61,14 @@
 // vertical alignment of self
 //--------------------------------------------------
 .flex-vs-start { align-self: flex-start; }
-.flex-vs-end { align-self: flex-end; }
 .flex-vs-center {align-self: center; }
 .flex-vs-baseline { align-self: baseline; }
 .flex-vs-stretch { align-self: stretch; }
+
+.flex-vs-end { 
+  align-self: flex-end; 
+  margin-top: auto;
+}
 
 //--------------------------------------------------
 // vertical alignment of multiple items
@@ -77,6 +96,12 @@
 .flex-2-fiths { flex: 0 1 40%; }
 .flex-3-fiths { flex: 0 1 60%; }
 .flex-4-fiths { flex: 0 1 80%; }
+
+.flex-1-sixth { flex: 0 1 16%; }
+.flex-2-sixths { flex: 0 1 33%; }
+.flex-3-sixths { flex: 0 1 50%; }
+.flex-4-sixths { flex: 0 1 66%; }
+.flex-5-sixths { flex: 0 1 83%; }
 
 //--------------------------------------------------
 // helpers
